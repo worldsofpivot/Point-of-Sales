@@ -21,14 +21,15 @@ public class PanReceipt extends JPanel {
     PanButtons panButtons;
     JButton btnCbk;
    JLabel lblSubtotal;
-   JLabel lbl123 = new JLabel();;
+   JLabel lbl123 = new JLabel("Pen");;
   double dSum, dSubtotal;
     int nCbk1;
+        String sPick;
    
     public PanReceipt(PanButtons _panButtons) {
        // panCash = _panCash;
         panButtons = _panButtons;
-        nCbk1 = panCash.nCbk;
+        //nCbk1 = panCash.nCbk;
         JButton btn1 = new JButton("Number 1");
         JButton btn2 = new JButton("Number 2");
         add(btn1);
@@ -41,7 +42,9 @@ class LabelChangeListener implements ActionListener {
             public void actionPerformed(ActionEvent event) {
                 JButton btn = (JButton) event.getSource();
                 System.out.println(dSum);
-                
+                if (sPick=="Chicken") {
+                    lbl123.setText("Subtotal is ");
+                }
                // sName = btn.getText(); // gets the text value of the button
                // panCash.UpdateLabel(sName);
             }
@@ -51,6 +54,8 @@ class LabelChangeListener implements ActionListener {
         btn2.addActionListener(labelChangeListener);
         
 }
+
+  
 
 
 
