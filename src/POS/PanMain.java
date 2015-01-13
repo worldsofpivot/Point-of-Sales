@@ -19,20 +19,21 @@ import javax.swing.*;
      import java.awt.*;
 public class PanMain extends JPanel // panel definition
        {
-    //PanCash panCash = new PanCash();
+   // PanCash panCash = new PanCash();
     PanButtons panButtons = new PanButtons();
-    PanReceipt panReceipt = new PanReceipt();
+    PanReceipt panReceipt = new PanReceipt(panButtons);
       //PanDisp panDisp = new PanDisp();
     //   PanLabelChange panLabelChange = new PanLabelChange(panDisp);
       // PanColour panColour = new PanColour(panDisp);
  public PanMain() {
+     //add(panButtons, BorderLayout.CENTER);
        // this next line tells PanMain that it has a border layout.
       // setLayout(new BorderLayout());
        //add(panLabelChange, BorderLayout.SOUTH);
      add(panReceipt, BorderLayout.SOUTH);
-       //add(panCash, BorderLayout.CENTER);
+       //add(panCash, BorderLayout.WEST);
        //add(panButtons, BorderLayout.WEST);
-       add(panButtons, BorderLayout.CENTER);
+       
        //add(panColour, BorderLayout.WEST);
        }
        }

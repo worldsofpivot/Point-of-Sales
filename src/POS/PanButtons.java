@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 public class PanButtons extends JPanel {
     
 double dSubtotal=0;
+String sPick;
    // JFrame frame = new JFrame(); //creates frame
     JButton[][] grid; //names the grid of buttons
 
@@ -61,6 +62,7 @@ int nWidth = 1, nLength = 0;
         public void actionPerformed(ActionEvent event) {
             if (event.getSource() == grid[1][0]) {
                 System.out.println("Chicken");
+                sPick="Chicken";
                  dSubtotal = 10.99*1.13;
             }
         }
